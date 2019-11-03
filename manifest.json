@@ -1,0 +1,22 @@
+  {
+    "name": "A2C",
+    "version": "1.0",
+    "description": "Buy and Save, for the good!",
+    "permissions": ["storage","declarativeContent","activeTab"],
+	"icons":{
+		"128":"images/Picture5.png"
+	},
+    "background": {
+    	"scripts": ["jquery-3.4.1.min.js","background.js"],
+		"persistent": true
+    },
+    "content_scripts": [{
+		"js": ["jquery-3.4.1.min.js","bootstrap.min.js","cs.js"],
+		"css": ["bootstrap.min.css"],
+		"matches": [ "https://c87bca5a.ngrok.io/book*"]
+	}],
+	"page_action":{
+	},
+	"web_accessible_resources":["jquery-3.4.1.min.js"],
+    "manifest_version": 2
+  }
